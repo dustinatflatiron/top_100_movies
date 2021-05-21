@@ -1,22 +1,24 @@
-class Movie 
+module Top100Movies
+    class Movie 
 
-    attr_reader :rank, :title, :rating, :link
+        attr_reader :rank, :title, :rating, :link
 
-    @@all = []
+        @@all = []
 
-    def initialize(rank, title, rating, link)
-        @rank = rank
-        @title = title
-        @rating = rating 
-        @link = link
-        self.save
-    end
+        def initialize(rank, title, rating, link)
+            @rank = rank
+            @title = title
+            @rating = rating 
+            @link = link
+            self.save
+        end
 
-    def save 
-        @@all << self
-    end
+        def save 
+            @@all << self
+        end
 
-    def self.all 
-        @@all
+        def self.all 
+            @@all
+        end
     end
 end
